@@ -13,7 +13,7 @@ export const main = (process)=> {
   };
 
   fs.writeFileSync(
-    join(process.cwd(), '.remarkrc'),
+    join(process.cwd(), '../../..', '.remarkrc'),
     JSON.stringify(remarkConfig, null, JSON_SPACING)
   );
 };
