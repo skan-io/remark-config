@@ -23,7 +23,7 @@ describe('Writing .remarkrc file', ()=> {
 
     main(process);
 
-    expect(join).toHaveBeenCalledWith(path, '.remarkrc');
+    expect(join).toHaveBeenCalledWith(path, '../../..', '.remarkrc');
     expect(writeFileSync).toHaveBeenCalledWith(
       'test-path',
       JSON.stringify(remarkConfig, null, JSON_SPACING)
