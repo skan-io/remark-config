@@ -3,7 +3,10 @@
   "private": false,
   "version": "0.0.0-semantically-release",
   "description": "A remark markdown lint configuration",
-  "main": "index.js",
+  "main": "./write.js",
+  "bin": {
+    "write-remark": "./write.js"
+  },
   "scripts": {
     "default": "run clean test",
     "clean": "rimraf ./build",
@@ -17,7 +20,7 @@
     "jest": "jest --runInBand --no-cache ",
     "cd": "run clean build release",
     "release": "semantic-release",
-    "postinstall": "node ./write.js"
+    "postinstall": "write-remark"
   },
   "repository": {
     "type": "git",
