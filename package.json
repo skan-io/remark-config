@@ -12,7 +12,7 @@
     "clean": "rimraf ./build",
     "build": "run build:*",
     "build:babel": "babel src --out-dir build/pkg --ignore '**/*.test.js'",
-    "build:files": "cp package.json ./README.md ./LICENSE build/pkg/",
+    "build:files": "cp package.json ./README.md ./LICENSE ./find.sh build/pkg/",
     "test": "run lint jest",
     "lint": "run lint:*",
     "lint:js": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
@@ -20,7 +20,7 @@
     "jest": "jest --runInBand --no-cache ",
     "cd": "run clean build release",
     "release": "semantic-release",
-    "postinstall": "write-remark"
+    "postinstall": "./find.sh"
   },
   "repository": {
     "type": "git",
